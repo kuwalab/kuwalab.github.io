@@ -14,7 +14,8 @@
  <body>
   <h1>Timepickerサンプル</h1>
   <p>このページは、<a href="https://fgelinas.com/code/timepicker/">jQuery UI Timepicker</a>のサンプルページです。</p>
-  <input type="text" size="5" id="time">
+  フォーカスでTimepicker表示: <input type="text" size="5" id="time1"><br>
+  ボタンをでTimepicker表示: <input type="text" size="5" id="time2"><input type="button" value="表示" id="time2Button">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/i18n/jquery-ui-i18n.min.js"></script>
@@ -22,7 +23,11 @@
   <script src="i18n/jquery.ui.timepicker-ja.js"></script>
   <script>
 (function($) {
-  $('#time').timepicker();
+  $('#time1').timepicker();
+  $('#time2').timepicker({
+    showOn: 'button',
+    button: '.time2Button'
+  });
 })(jQuery);
   </script>
  </body>
